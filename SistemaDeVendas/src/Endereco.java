@@ -62,18 +62,12 @@ public class Endereco {
 	}
 	
 	public String getCep() {
-		return this.cep.substring(0,4)+"-"+this.cep.substring(5, 7); //89250-120
+		return this.cep.substring(0,4)+"-"+this.cep.substring(5, 7); 
+		//89250-120
 	}
 	
-	public boolean setComplemento(String complemento) {
-		if (complemento.length() >= 4 ) {
-			this.complemento = complemento;
-			return true;
-		}
-		else {
-			return false;
-		}
-		
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
 	}
 	
 	public String getComplemento() {
