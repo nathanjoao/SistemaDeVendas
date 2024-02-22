@@ -2,29 +2,47 @@ public class Pessoa {
 
 	private String nome;
 	private String cpf;
-	private int rg;
+	private String rg;
 	
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public boolean setCpf(String cpf) {
+		if ( cpf.length() == 11 ) {
+			this.cpf = cpf;
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public String getCpf() {
 		return cpf;
 	}
 	
-	public void setNome(String nome) {
-		this.nome = nome;
+	public boolean setNome(String nome) {
+		if ( nome.length() >= 3 ) {
+			this.nome = nome;
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public String getNome() {
 		return nome;
 	}
 	
-	public void setRg(int rg) {
-		this.rg = rg;
+	public boolean setRg(String rg) {
+		if ( rg.length() == 10 ) {
+			this.rg = rg;
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
-	public int getRg() {
+	public String getRg() {
 		return rg;
 	}
 }

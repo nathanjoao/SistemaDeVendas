@@ -38,6 +38,7 @@ public class Endereco {
 	
 	public boolean setBairro(String bairro) {
 		if (bairro.length() >= 3) {
+			if(bairro.contains("A-Z,a-z"));
 			this.bairro = bairro;
 			return true;
 		}
@@ -51,7 +52,7 @@ public class Endereco {
 	}
 
 	public boolean setCep(String cep) {
-		if (cep.length() == 8 ) {
+		if (cep.length() == 8 && cep.matches(".*[0-9]*.")) {
 			this.cep = cep;
 			return true;
 		}
@@ -61,7 +62,7 @@ public class Endereco {
 	}
 	
 	public String getCep() {
-		return cep;
+		return this.cep.substring(0,4)+"-"+this.cep.substring(5, 7); //89250-120
 	}
 	
 	public boolean setComplemento(String complemento) {
