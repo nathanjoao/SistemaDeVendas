@@ -3,6 +3,7 @@ public class Pessoa {
 	private String nome;
 	private String cpf;
 	private String rg;
+	private Endereco endereco;
 	
 	public boolean setCpf(String cpf) {
 		if ( cpf.length() == 11 ) {
@@ -44,5 +45,13 @@ public class Pessoa {
 	
 	public String getRg() {
 		return rg;
+	}
+
+	public void setEndereco (Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public Endereco getEndereco() {
+		return this.endereco;
 	}
 }

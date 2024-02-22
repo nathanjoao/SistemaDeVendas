@@ -45,6 +45,4 @@ public class Pedidos {
 	public int getQtdItens() {
 		return qtdItens;
 	}
-	
-	
 }
