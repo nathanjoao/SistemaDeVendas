@@ -69,6 +69,12 @@ public class Pedidos {
 		return qtdItens;
 	}
 
-	
+	public String getListaP() {
+		String lista = "";
+		for (int cont = 0; cont < produto.size();cont++ ) {
+			lista += getProduto(cont).getDescricao()+"\n";
+		}
+		return lista;
+	}
 	
 }

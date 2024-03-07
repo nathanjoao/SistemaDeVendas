@@ -25,17 +25,26 @@ public class Vendas {
 		Pedidos pedido1 = new Pedidos();
 		Pedidos pedido2 = new Pedidos();
 		//pedido.setNum();
+
+		int quantPedidos;
 		
-		System.out.println( "\nDigite o valor do produto 1");
-		produto1.setPreco(sc.nextDouble());
+		System.out.println( "\nQual a quantidade de proutos?");
+		quantPedidos = sc.nextInt();
 		
-		System.out.println( "\nDigite o valor do produto 2");
-		produto2.setPreco(sc.nextDouble());
+		for ( int cont = 0; cont < quantPedidos; cont++ ) {
+			System.out.println( "\nDigite o nome do produto");
+			sc.nextLine();
+			produto1.setDescricao(sc.nextLine());
+			
+			System.out.println( "\nDigite o valor do produto");
+			produto1.setPreco(sc.nextDouble());
+			
+			pedido1.addProduto(produto1);
+		
+		}
 	
-		pedido1.addProduto(produto1);
-		pedido1.addProduto(produto2);
-	
-		System.out.println( "Valor do pedido: ");
-		System.out.println("R$"+pedido1.getValorTotal());
+			System.out.println( "\nValor total:");
+			System.out.println("R$"+pedido1.getValorTotal());
+			System.out.println("\nLista dos produtos: "+pedido1.getListaP());
 	}
 }
