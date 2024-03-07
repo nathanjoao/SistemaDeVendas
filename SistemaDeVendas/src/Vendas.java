@@ -7,7 +7,7 @@ public class Vendas {
 		Scanner sc = new Scanner (System.in);
 		Endereco end1 = new Endereco();
 		
-		System.out.println( "\nInforme o cep ");
+		System.out.println( "Informe o cep ");
 		end1.setCep(sc.nextLine());
 		
 		System.out.println( "\nCep: "+end1.getCep());
@@ -26,13 +26,16 @@ public class Vendas {
 		Pedidos pedido2 = new Pedidos();
 		//pedido.setNum();
 		
+		System.out.println( "\nDigite o valor do produto 1");
+		produto1.setPreco(sc.nextDouble());
 		
-		
-		
+		System.out.println( "\nDigite o valor do produto 2");
+		produto2.setPreco(sc.nextDouble());
 	
+		pedido1.addProduto(produto1);
+		pedido1.addProduto(produto2);
 	
-	
-	
-	
+		System.out.println( "Valor do pedido: ");
+		System.out.println("R$"+pedido1.getValorTotal());
 	}
 }
