@@ -30,7 +30,12 @@ public class Pessoa {
 	}
 	
 	public String getNome() {
-		return nome;
+		if (this.nome == null) {
+		return "inválido";	
+		}
+		else {
+			return nome;
+		}
 	}
 	
 	public boolean setRg(String rg) {
@@ -54,4 +59,5 @@ public class Pessoa {
 	public Endereco getEndereco() {
 		return this.endereco;
 	}
+
 }
